@@ -28,7 +28,7 @@ model User {
 
   //Profile fields
   bio String?
-  experience String?
+  experience Int?
   skills String[]
 
   assessments Assessment[]
