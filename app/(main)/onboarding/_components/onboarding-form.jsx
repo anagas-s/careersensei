@@ -35,9 +35,9 @@ const OnboardingForm = ({ industries }) => {
   const [selectedIndustry, setSelectedIndustry] = React.useState(null);
   const router = useRouter();
   const {
-    data: updateResult,
     loading: updateLoading,
     fn: updateUserFn,
+    data: updateResult,
   } = useFetch(updateUser);
 
   const {
@@ -66,7 +66,7 @@ const OnboardingForm = ({ industries }) => {
 
   useEffect(() => {
     if (updateResult?.success && !updateLoading) {
-      toast.success("Profile updated successfully");
+      toast.success("Profile completed successfully!");
       router.push("/dashboard");
       router.refresh();
     }
